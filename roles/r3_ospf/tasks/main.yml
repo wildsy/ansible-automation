@@ -1,0 +1,13 @@
+---
+- name: Set OSPF configuration
+  ios_config:
+    provider:
+      username: 
+      password: 
+    timeout: 30
+    lines:
+      - router-id 1.1.1.1
+      - netw 11.11.11.0 0.0.0.255 area 0
+      - netw 192.168.30.0 0.0.0.255 area 0
+      - netw 192.168.1.0 0.0.0.255 area 0
+    parents: router ospf 1

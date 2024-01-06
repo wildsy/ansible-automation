@@ -1,0 +1,22 @@
+---
+- name: interface IP address
+  ios_config:
+    provider:
+      username: 
+      password: 
+    timeout: 30
+    lines:
+      - ip address 11.11.11.2 255.255.255.0
+      - no shutdown
+    parents: interface FastEthernet 1/1
+
+- name: interface IP address
+  ios_config:
+    provider:
+      username: 
+      password: 
+    timeout: 30
+    lines:
+      - ip address 192.168.30.1 255.255.255.0
+      - no shutdown
+    parents: interface FastEthernet 1/2
